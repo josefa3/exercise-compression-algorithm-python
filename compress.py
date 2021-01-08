@@ -13,6 +13,10 @@ symbols = {
 
 def compress(content):
 
-    compressed_content = ''    
+    compressed_content = content
+
+    for i, emoji in symbols.items():
+        compressed_content = compressed_content.replace(i, emoji)
+    print(compressed_content)
 
     return content
